@@ -52,8 +52,8 @@ while(True):
     elif(choice == "yes"):
         print("You throw your sword at the snake, and as soon as it makes contact, it explodes, killing the snake.")
         print("The giant appears, howling in rage.  He yells that the sword was supposed to kill you, and now everything was ruined, and charges you.")
-        choice = input("Do you attack or run away?")
-    if(choice == "attack"):
+        choice = input("Do you Attack or Run away?")
+    if(choice == "Attack"):
         print("The giant makes destroys you, and then eats you.  Game over.")
     elif(choice == "Run away"):
         print("you have speed, so you out run the giant, and run out of the exit, which is too small for the giant.")
