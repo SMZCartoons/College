@@ -1,4 +1,7 @@
-while(True): 
+print("In this game, you have 5 lives, so you have 5 times to beat this games.")  
+print("There are 3 rooms, each with a challenge in it, and many corridors that will lead to victory or success.  Good luck!")
+for lives in range(0,5): 
+    lives+=1
     choice = input("You Walk into a crossroads.  Do you go left or right?")
     print(choice)
     if(choice == "left"):
@@ -65,13 +68,3 @@ while(True):
     elif(choice == "road 3"):
         print("You end up at Summer Tech and have a Blast!!!  Good Choice!")
         print("game over!") 
-        break
-
-    
-    
-
-    
-    
-    
-    
-

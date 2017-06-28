@@ -30,7 +30,7 @@ if(choice == "change"):
         if(choice != "none"):
             item = input("What item would you like to change?")
             newitem = input("what new item would you like to put in?")
-            shoppinglist[item] = choice           
+            shoppinglist[eval(item)] = newitem           
             print(shoppinglist)
         else:
             break
