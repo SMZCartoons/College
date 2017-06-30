@@ -8,4 +8,4 @@ choice = eval(input("how big do you want the square?"))
 for square in range(0,choice):
     for square in range(0,choice):
         print("* ",end="")
-    print("")
+    print("") 
