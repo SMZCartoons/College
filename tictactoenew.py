@@ -114,7 +114,3 @@ while(True):
     if(pieces[0][2] == "O" and pieces[1][2] == "O" and pieces[2][2] == "O"):
         print("Game Over!")
         break
-     
-        
-    
-    
