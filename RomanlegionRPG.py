@@ -57,3 +57,15 @@ print((pieces[6][4]),end=" ")
 print((pieces[6][5]),end=" ")
 print((pieces[6][6]),end=" ")
 print()
+print("INSTRUCTIONS:") 
+print("This is a game of Tic-tac-Toe.  Here you must enter your coordinates for where your pieces are.")  
+print("For the column, it is column 0, 1, 2, 3, 4, 5, and 6.")  
+print("So for instance, if I were to enter the first column, I would say Column 0")
+piece_chosen = input("Player 1: Black or White?")
+if(piece_chosen == "Black"):
+    print("OK.  You are controlling pieces Black")
+    print("Player 2: You are controlling pieces White")
+if(piece_chosen == "White"):
+    print("OK.  You are controlling pieces White")
+    print("Player 2: you are controlling pieces Black")
+while(True):
