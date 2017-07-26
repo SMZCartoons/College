@@ -72,7 +72,7 @@ run = True
 playernum = 1
 while(run):
     first_move_collumn = input("Player "+str(playernum)+": Which column would you like to move to?")
-    pieces[6][eval(first_move_collumn)] = "O"
+    pieces[6][eval(first_move_collumn)] = " O "
     pieces[6][eval(first_move_collumn)] = " A "
     print((pieces[0][0]),end=" ")
     print((pieces[0][1]),end=" ")
