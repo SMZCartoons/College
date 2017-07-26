@@ -74,6 +74,30 @@ while(True):
     if(pieces[0][2] == "X" and pieces[1][2] == "X" and pieces[2][2] == "X"):
         print("Game Over!")
         break
+    if(pieces[0][0] == "O" and pieces[0][1] == "O" and pieces[0][2] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[1][0] == "O" and pieces[1][1] == "O" and pieces[1][2] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[2][0] == "O" and pieces[2][1] == "O" and pieces[2][2] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[0][0] == "O" and pieces[1][1] == "O" and pieces[2][2] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[0][2] == "O" and pieces[1][1] == "O" and pieces[3][0] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[0][0] == "O" and pieces[1][0] == "O" and pieces[2][0] == "O"):
+        print("Game Over!")
+        break
+    if(pieces[0][1] == "O" and pieces[1][1] == "O" and pieces[2][1] == "O"):
+        print("Game Over!")
+        break   
+    if(pieces[0][2] == "O" and pieces[1][2] == "O" and pieces[2][2] == "O"):
+        print("Game Over!")
+        break
     
     first_move_row = input("Player 2: Which row would you like to move to?")
     first_move_collumn = input("Player 2: Which column would you like to move to?")
@@ -90,6 +114,30 @@ while(True):
     print((pieces[2][0]),end=" ")
     print((pieces[2][1]),end=" ")
     print((pieces[2][2]),end=" ")
+    if(pieces[0][0] == "X" and pieces[0][1] == "X" and pieces[0][2] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[1][0] == "X" and pieces[1][1] == "X" and pieces[1][2] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[2][0] == "X" and pieces[2][1] == "X" and pieces[2][2] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[0][0] == "X" and pieces[1][1] == "X" and pieces[2][2] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[0][2] == "X" and pieces[1][1] == "X" and pieces[3][0] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[0][0] == "X" and pieces[1][0] == "X" and pieces[2][0] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[0][1] == "X" and pieces[1][1] == "X" and pieces[2][1] == "X"):
+        print("Game Over!")
+        break
+    if(pieces[0][2] == "X" and pieces[1][2] == "X" and pieces[2][2] == "X"):
+        print("Game Over!")
+        break
     if(pieces[0][0] == "O" and pieces[0][1] == "O" and pieces[0][2] == "O"):
         print("Game Over!")
         break
