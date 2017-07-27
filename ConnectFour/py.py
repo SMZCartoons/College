@@ -61,19 +61,21 @@ print("INSTRUCTIONS:")
 print("This is a game of Connect Four.  Here you must enter your coordinates for where your pieces are.")  
 print("For the column, it is column 0, 1, 2, 3, 4, 5, and 6.")  
 print("So for instance, if I were to enter the first column, I would say Column 0")
-piece_chosen = input("Player 1: A or O?")
-if(piece_chosen == "0"):
-    print("OK.  You are controlling pieces A")
-    print("Player 2: You are controlling pieces O")
-if(piece_chosen == "O"):
-    print("OK.  You are controlling pieces O")
-    print("Player 2: you are controlling pieces A")
+print("Player 1 is controlling pieces A")
+print("Player 2: You are controlling pieces O")
 run = True
 playernum = 1
 while(run):
     first_move_collumn = input("Player "+str(playernum)+": Which column would you like to move to?")
-    pieces[6][eval(first_move_collumn)] = " O "
-    pieces[6][eval(first_move_collumn)] = " A "
+    ind = eval(first_move_collumn)
+    for check in range (6,0,-1):
+        if(pieces[check][ind] is "___"):
+            if(playernum == 2):
+                pieces[check][ind] = " O "
+                break
+            if(playernum == 1):
+                pieces[check][ind] = " A "
+                break
     print((pieces[0][0]),end=" ")
     print((pieces[0][1]),end=" ")
     print((pieces[0][2]),end=" ")
@@ -133,6 +135,17 @@ while(run):
     lastA = True
     Quantity = 0
     for row in pieces:
+        for block in row:
+            if(lastA == True and block == "A"):
+                Quantity += 1
+            elif(lastA == False and block == "O"):
+                Quantity += 1
+            else: 
+                Quantity = 1
+            if(Quantity == 4):
+                print("Game Over!")
+                run = False
+    for block in pieces:
         for block in row:
             if(lastA == True and block == "A"):
                 Quantity += 1
