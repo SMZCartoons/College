@@ -18,7 +18,7 @@ for lives in range(0,5):
     elif(choice == "attack"):
         print("You climb up the ape and reach its neck, and choke it.")
         choice = input("You see a treasure chest.  Do you open it, or exit the room?")
-    if(choice == "open it"):
+    if(choice == "open"):
         print("Acid sprays on your face and you die.  Game Over")
     elif (choice == "exit the room"):
         print("You reach a corridor and walk 50 feet and then reach another room.  A giant approaches you.")
