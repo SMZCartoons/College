@@ -1,4 +1,4 @@
-def func ():
+'''def func ():
     print("hi")
     print("bye")
 
@@ -14,4 +14,14 @@ def add (a,b):
 
 n=add(5,4)
 print(n)
-print(add(3,4))
+print(add(3,4))'''
+def mathvader():
+    print(5)
+    print(3)
+mathvader()
+mathvader()
+mathvader()
+def add (a,b):
+    print(a+b)
+    
+add(5,3)
