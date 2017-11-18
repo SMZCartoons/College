@@ -5,7 +5,7 @@
 func()
 func()
 func()
-print()
+prin/t()
 def add (a,b):
     print("bye")
     if(a!=b):
