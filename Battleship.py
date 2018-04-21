@@ -9,52 +9,106 @@ def Battle (b):
 Battle(Board) 
 run = True
 playernum = 1
-while(True):
-        print("You can position five ships: Carrier(5 spaces), Battleship(4 spaces), Cruiser(3 spaces), Submarine(3 spaces), and Destroyer(2 spaces)")
-        pieces = input("What piece do you want to pick?")
-        if(pieces == "Carrier"):
-            column = int(input("Which column do you want it in?") )
-            row = int(input("Which row do you want it in?"))
-            Board[row][column] = "*"
-            Board[row][column+1] = "*"
-            Board[row][column+2] = "*"
-            Board[row][column+3] = "*"
-            Board[row][column+4] = "*"
-        Battle(Board)
-        if(pieces == "Battleship"):
-            column = int(input("Which column do you want it in?") )
-            row = int(input("Which row do you want it in?"))
-            Board[row][column] = "*"
-            Board[row][column+1] = "*"
-            Board[row][column+2] = "*"
-            Board[row][column+3] = "*"
-        Battle(Board)
-        if(pieces == "Cruiser"):
-            column = int(input("Which column do you want it in?") )
-            row = int(input("Which row do you want it in?"))
-            Board[row][column] = "*"
-            Board[row][column+1] = "*"
-            Board[row][column+2] = "*"
-        Battle(Board)
-        if(pieces == "Submarine"):
-            column = int(input("Which column do you want it in?") )
-            row = int(input("Which row do you want it in?"))
-            Board[row][column] = "*"
-            Board[row][column+1] = "*"
-            Board[row][column+2] = "*"
-        Battle(Board)
-        if(pieces == "Cruiser"):
-            column = int(input("Which column do you want it in?") )
-            row = int(input("Which row do you want it in?"))
-            Board[row][column] = "*"
-            Board[row][column+1] = "*"
+numplaced = 0
+while run:
+    print("Player 1: You can position five ships: Carrier(5 spaces), Battleship(4 spaces), Cruiser(3 spaces), Submarine(3 spaces), and Destroyer(2 spaces)")
+    pieces = input("What piece do you want to pick?")
+    if(pieces == "Carrier"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        Board[row][column+3] = "*"
+        Board[row][column+4] = "*"
+        numplaced+=1
         Battle(Board)
         
-        if(playernum == 1):
-            playernum = 2
-        else:
-            playernum=1
-            print("Game over!")
+    if(pieces == "Battleship"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        Board[row][column+3] = "*"
+        numplaced+=2
+        Battle(Board)
+    if(pieces == "Cruiser"):
+        column = int(input("Which column do you want it in?"))
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        numplaced+=3
+        Battle(Board)
+    if(pieces == "Submarine"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        numplaced+=4
+        Battle(Board)
+    if(pieces == "Destroyer"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        numplaced+=5
+        Battle(Board)
+    if(numplaced == 5):
+        run = False
+Board2 = [["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"]]
+Battle(Board2) 
+playernum = 1  
+numplaced = 0     
+while run:    
+    print("Player 2: You can position five ships: Carrier(5 spaces), Battleship(4 spaces), Cruiser(3 spaces), Submarine(3 spaces), and Destroyer(2 spaces)")
+    pieces = input("What piece do you want to pick?")
+    if(pieces == "Carrier"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        Board[row][column+3] = "*"
+        Board[row][column+4] = "*"
+        numplaced+=1
+        Battle(Board2)
+    if(pieces == "Battleship"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        Board[row][column+3] = "*"
+        numplaced+=2
+        Battle(Board2)
+    if(pieces == "Cruiser"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        numplaced+=3
+        Battle(Board2)
+    if(pieces == "Submarine"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        Board[row][column+2] = "*"
+        numplaced+=4
+        Battle(Board2)
+    if(pieces == "Destroyer"):
+        column = int(input("Which column do you want it in?") )
+        row = int(input("Which row do you want it in?"))
+        Board[row][column] = "*"
+        Board[row][column+1] = "*"
+        numplaced+=5
+        Battle(Board2)
+    if(numplaced == 5):
+        run = False
 while(run):
     first_collumn = input("Player "+str(playernum)+":Which Column would you like to move to?")
     ind = eval(first_collumn)
