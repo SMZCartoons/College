@@ -12,7 +12,7 @@ def breakable (input):
 text = str.upper(input("Type in your text"))
 question = input("Encrypt or Decrypt?")
 if(question == "Encrypt"):
-    for letter in text.split(" "):
+    for letter in text:
         print(unbreakable(letter), end="")
 if(question == "Decrypt"):
     for letter in text.split(" "):
