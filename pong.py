@@ -100,6 +100,8 @@ window.onkeypress(paddle_right_down, "Down")
 window.listen()
 #sets the keyboard keys to move paddles
 
+#BALL MOVING
+
     
 
   
